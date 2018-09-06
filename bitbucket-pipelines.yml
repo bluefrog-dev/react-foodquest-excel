@@ -11,6 +11,6 @@ pipelines:
         caches:
           - node
         script: # Modify the commands below to build your repository.
-          - yarn install
-          - yarn test-ci
-          - yarn deploy
+          - sudo yarn install
+          - sudo yarn test-ci
+          - sudo yarn deploy
