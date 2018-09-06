@@ -13,6 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test-ci": "CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "yarn run build && aws s3 cp ./build s3://https://bitbucket.org/bluefrog-co/react-foodquest-excel/ --recursive"
   }
 }
